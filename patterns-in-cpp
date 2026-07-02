@@ -57,3 +57,19 @@ int main(){
   }
   return 0;
 }
+
+//prints a square of consecutive numbers in a pattern
+int main(){
+  int m;
+  cout << "enter number: ";
+  cin >> m;
+  int num = 1;
+  for (int i = 0; i<m; i++){
+     for(int j = 0; j<m; j++){
+         cout << num;
+         num++;
+     }
+     cout << endl;
+  }
+  return 0;
+}
