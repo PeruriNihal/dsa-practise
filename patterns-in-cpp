@@ -1,13 +1,59 @@
 #include<iostream>
 using namespace std;
-
+// prints a square of stars
 int main (){ 
-  for (int i=1; i<=5; i++){
-      
-      int m = 10;
-      for (int i=0; i<m; i++){
+  int m;
+  cout << "enter number of columns: ";
+  cin >> m;
+  for (int i=1; i<=m; i++){ 
+      for (int j=0; j<m; j++){
       cout << "*";
       }
       cout << endl;     
     }
+}
+
+// prints a rectangle of numbers
+int main (){
+  int n;
+  cout << "enter number: ";
+  cin >> n;
+  for(int i = 1; i<=n; i++){
+      for(int j = 1; j<=n; j++){
+          cout << j;
+
+      }
+      cout << endl;
+  }
+  return 0;
+}
+
+// prints a rectangle of numbers in reverse order
+int main (){
+  int n;
+  cout << "enter number: ";
+  cin >> n;
+  for(int i = 1; i<=n; i++){
+      for(int j = n; j>=1; j--){
+          cout << j;    
+      }
+      cout << endl;
+  }
+  return 0;
+}
+
+//prints alpabets in a rectangle
+int main(){
+  int n;
+  cout << "enter number: ";
+  cin >> n;
+  for(int i =0; i<n; i++){
+    char ch = 'A';
+     for(int j =0; j<n; j++){
+         cout << ch;
+          ch++;
+     }
+     cout << endl;
+  }
+  return 0;
 }
