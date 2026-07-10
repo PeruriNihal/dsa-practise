@@ -1,0 +1,212 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+//prints the size of vector and its elements
+
+int main(){
+    vector<char> vec = {'a', 'b', 'c', 'd', 'e'};
+
+    cout << "size = " << vec.size() << endl;
+    
+    for(char val : vec){
+        cout << val << " ";
+    }
+    return 0;
+}
+
+//vector functions
+//push_back() - adds an element at the end of vector
+int main(){
+    vector<int> vec;
+    cout << "size = " << vec.size() << endl;
+    vec.push_back(25);
+    vec.push_back(35);
+    vec.push_back(45);
+    cout << "size = " << vec.size() << endl;
+
+    for(int val : vec){
+        cout << val << " ";
+    }
+    return 0;
+}
+
+//pop_back() - removes the last element of vector
+int main(){
+    vector<int> vec;
+    vec.push_back(25);
+    vec.push_back(35);
+    vec.push_back(45);
+    cout << "size = " << vec.size() << endl;
+    vec.pop_back();
+    cout << "size = " << vec.size() << endl;
+    for(int val : vec){
+        cout << val << " ";
+    }
+    return 0;
+}   
+
+//clear() - removes all the elements of vector
+int main(){
+    vector<int> vec;
+    vec.push_back(25);
+    vec.push_back(35);
+    vec.push_back(45);
+    cout << "size = " << vec.size() << endl;
+    vec.clear();
+    cout << "size = " << vec.size() << endl;
+    for(int val : vec){
+        cout << val << " ";
+    }
+    return 0;
+}   
+
+//insert() - inserts an element at a specific position
+int main(){
+    vector<int> vec;
+    vec.push_back(25);
+    vec.push_back(35);
+    vec.push_back(45);
+    cout << "size = " << vec.size() << endl;
+    vec.insert(vec.begin() + 1, 30); // inserts 30 at index 1
+    cout << "size = " << vec.size() << endl;
+    for(int val : vec){
+        cout << val << " ";
+    }
+    return 0;
+}   
+
+//erase() - removes an element at a specific position
+int main(){
+    vector<int> vec;
+    vec.push_back(25);
+    vec.push_back(35);
+    vec.push_back(45);
+    cout << "size = " << vec.size() << endl;
+    vec.erase(vec.begin() + 1); // removes element at index 1
+    cout << "size = " << vec.size() << endl;
+    for(int val : vec){
+        cout << val << " ";
+    }
+    return 0;
+}   
+
+
+//resize() - changes the size of vector
+int main(){
+    vector<int> vec;
+    vec.push_back(25);
+    vec.push_back(35);
+    cout << "size = " << vec.size() << endl;
+    vec.resize(5); // changes size to 5
+    cout << "size = " << vec.size() << endl;
+    for(int val : vec){
+        cout << val << " ";
+    }
+    return 0;
+}   
+
+//reserve() - reserves memory for vector
+int main(){
+    vector<int> vec;
+    cout << "capacity = " << vec.capacity() << endl;
+    vec.reserve(10); // reserves memory for 10 elements
+    cout << "capacity = " << vec.capacity() << endl;
+    return 0;
+}
+
+//shrink_to_fit() - reduces the capacity of vector to fit its size
+int main(){
+    vector<int> vec;
+    vec.push_back(25);
+    vec.push_back(35);
+    cout << "capacity = " << vec.capacity() << endl;
+    vec.shrink_to_fit(); // reduces capacity to fit size
+    cout << "capacity = " << vec.capacity() << endl;
+    return 0;
+}
+
+//front() - returns the first element of vector
+int main(){
+    vector<int> vec;
+    vec.push_back(25);
+    vec.push_back(35);
+    cout << "first element = " << vec.front() << endl; // returns first element
+    return 0;
+}   
+
+//back() - returns the last element of vector
+int main(){
+    vector<int> vec;
+    vec.push_back(25);
+    vec.push_back(35);
+    cout << "last element = " << vec.back() << endl; // returns last element
+    return 0;
+}
+
+//at() - returns the element at a specific position
+int main(){
+    vector<int> vec;
+    vec.push_back(25);
+    vec.push_back(35);
+    cout << "element at index 1 = " << vec.at(1) << endl; // returns element at index 1
+    return 0;
+}
+
+//data() - returns a pointer to the underlying array
+int main(){
+    vector<int> vec;
+    vec.push_back(25);
+    vec.push_back(35);
+    int* ptr = vec.data(); // returns pointer to underlying array
+    cout << "first element = " << *ptr << endl; // dereferencing pointer to get first element
+    return 0;
+}
+
+//empty() - checks if vector is empty
+int main(){
+    vector<int> vec;
+    cout << "is empty = " << vec.empty() << endl; // returns true if vector is empty
+    vec.push_back(25);
+    cout << "is empty = " << vec.empty() << endl; // returns false if vector is not empty
+    return 0;
+}   
+
+//swap() - swaps the contents of two vectors
+int main(){
+    vector<int> vec1 = {1, 2, 3};
+    vector<int> vec2 = {4, 5, 6};
+    cout << "vec1 before swap: ";
+    for(int val : vec1){
+        cout << val << " ";
+    }
+    cout << endl;
+    cout << "vec2 before swap: ";
+    for(int val : vec2){
+        cout << val << " ";
+    }
+    cout << endl;
+    vec1.swap(vec2); // swaps contents of vec1 and vec2
+    cout << "vec1 after swap: ";
+    for(int val : vec1){
+        cout << val << " ";
+    }
+    cout << endl;
+    cout << "vec2 after swap: ";
+    for(int val : vec2){
+        cout << val << " ";
+    }
+    cout << endl;
+    return 0;
+}
+
+//assign() - assigns new contents to vector
+int main(){
+    vector<int> vec;
+    vec.assign(5, 10); // assigns 5 elements with value 10
+    cout << "size = " << vec.size() << endl;
+    for(int val : vec){
+        cout << val << " ";
+    }
+    return 0;
+}
